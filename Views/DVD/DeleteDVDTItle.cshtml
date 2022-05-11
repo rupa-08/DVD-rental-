@@ -1,0 +1,33 @@
+﻿@model AppDevGroupCoursework.Models.DVDTitle
+
+@{
+    ViewData["Title"] = "Delete Dvd Title";
+}
+
+<h1>Delete DVD</h1>
+
+                    <div class="card shadow mb-4">
+<div class="card-body">
+<h4>Are you sure you want to delete the DVD?</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DeleteDVDTitle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <input type="hidden" asp-for="dVDNumber" class="form-control" />
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" readonly="true"/>
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+                <a asp-action="DVDDetails" class="btn btn-primary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+    </div>
+</div>
+
+

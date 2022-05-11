@@ -1,0 +1,74 @@
+﻿@model IEnumerable<AppDevGroupCoursework.Models.User>
+
+@{
+    ViewData["Title"] = "ManageUsers";
+}
+
+<h1>ManageUsers</h1>
+
+                    <div class="card shadow mb-4">
+<div class="card-body">
+<div class="table-responsive">
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Role
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.username
+                </td>
+                <td>
+                    @item.name
+                </td>
+                <td>
+                    @item.email
+                </td>
+                <td>
+                    @item.phoneNumber
+                </td>
+                <td>
+                    @item.usertype
+                </td>
+                <td>
+                    @item.password
+                </td>
+                <td>
+                    <div class="form-group">
+                        <a asp-controller="Admin" asp-action="EditUsers" asp-route-usernumber="@item.usernumber" class="btn btn-primary">Edit</a>
+                    </div>
+                    <div class="form-group">
+                        <a asp-controller="Admin" asp-action="DeleteUsers"  asp-route-usernumber="@item.usernumber" class="btn btn-danger">Delete</a>
+                    </div>
+                </td>
+            </tr>          
+        }
+    </tbody>
+</table>
+</div>
+</div>
+</div>

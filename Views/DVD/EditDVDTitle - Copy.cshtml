@@ -1,0 +1,89 @@
+﻿@model AppDevGroupCoursework.Request.DVDRequest
+
+@{
+    ViewData["Title"] = "AddDVDTitle";
+}
+
+<h1>AddDVDTitle</h1>
+
+<h4>DVDRequest</h4>
+<hr />
+
+                    <div class="card shadow mb-4">
+<div class="card-body">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddDVDTitle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudioName" class="control-label"></label>
+                <input asp-for="StudioName" class="form-control" />
+                <span asp-validation-for="StudioName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerName" class="control-label"></label>
+                <input asp-for="ProducerName" class="form-control" />
+                <span asp-validation-for="ProducerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StandardCharge" class="control-label"></label>
+                <input asp-for="StandardCharge" class="form-control" />
+                <span asp-validation-for="StandardCharge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PenaltyCharge" class="control-label"></label>
+                <input asp-for="PenaltyCharge" class="form-control" />
+                <span asp-validation-for="PenaltyCharge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DvdDescription" class="control-label"></label>
+                <input asp-for="DvdDescription" class="form-control" />
+                <span asp-validation-for="DvdDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AgeRestriction" /> @Html.DisplayNameFor(model => model.AgeRestriction)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReleaseDate" class="control-label"></label>
+                <input asp-for="ReleaseDate" class="form-control" />
+                <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatePurchased" class="control-label"></label>
+                <input asp-for="DatePurchased" class="form-control" />
+                <span asp-validation-for="DatePurchased" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalNoCopies" class="control-label"></label>
+                <input asp-for="TotalNoCopies" class="form-control" />
+                <span asp-validation-for="TotalNoCopies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="castMember.ActorFirstName" class="control-label"></label>
+                <input asp-for="castMember.ActorFirstName" class="form-control" />
+                <span asp-validation-for="castMember.ActorFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="castMember.ActorSurname" class="control-label"></label>
+                <input asp-for="castMember.ActorSurname" class="form-control" />
+                <span asp-validation-for="castMember.ActorSurname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+    </div>
+</div>

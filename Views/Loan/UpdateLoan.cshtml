@@ -1,0 +1,60 @@
+﻿@model AppDevGroupCoursework.DTO.LoanDetailDTO
+
+<h1>Bill</h1>
+<hr />
+                    <div class="card shadow mb-4">
+<div class="card-body">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateLoan" method="post">
+            <div class="form-group">
+                <label asp-for="LoanNumber" class="control-label"></label>
+                <input asp-for="LoanNumber" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="CopyNumber" class="control-label"></label>
+                <input asp-for="CopyNumber" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOut" class="control-label"></label>
+                <input asp-for="DateOut" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="DueDate" class="control-label"></label>
+                <input asp-for="DueDate" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfDays" class="control-label"></label>
+                <input asp-for="NumberOfDays" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="StandardCharge" class="control-label"></label>
+                <input asp-for="StandardCharge" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="PenaltyCharge" class="control-label"></label>
+                <input asp-for="PenaltyCharge" class="form-control" readOnly="true"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalCharge" class="control-label"></label>
+                <input asp-for="TotalCharge" class="form-control" readOnly="true"/>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Return" class="btn btn-primary" />
+                <a asp-action="LoanDetails" class="btn btn-cancel">cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+    </div>
+</div>
+
